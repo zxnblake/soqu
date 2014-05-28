@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/PUBLIC/!svn/ver/65/interface/Advisor/client/app/lib/angular
+END
+angular-animate.js
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/PUBLIC/!svn/ver/65/interface/Advisor/client/app/lib/angular/angular-animate.js
+END
+angular-touch.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/PUBLIC/!svn/ver/65/interface/Advisor/client/app/lib/angular/angular-touch.js
+END
+angular-sanitize.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/PUBLIC/!svn/ver/65/interface/Advisor/client/app/lib/angular/angular-sanitize.js
+END
+angular-cookies.js
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/PUBLIC/!svn/ver/65/interface/Advisor/client/app/lib/angular/angular-cookies.js
+END
+angular.js
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/PUBLIC/!svn/ver/65/interface/Advisor/client/app/lib/angular/angular.js
+END
+angular-route.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/PUBLIC/!svn/ver/65/interface/Advisor/client/app/lib/angular/angular-route.js
+END
+angular-loader.js
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/PUBLIC/!svn/ver/65/interface/Advisor/client/app/lib/angular/angular-loader.js
+END
+angular-mocks.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/PUBLIC/!svn/ver/65/interface/Advisor/client/app/lib/angular/angular-mocks.js
+END
+angular-csp.css
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/PUBLIC/!svn/ver/65/interface/Advisor/client/app/lib/angular/angular-csp.css
+END
+errors.json
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/PUBLIC/!svn/ver/65/interface/Advisor/client/app/lib/angular/errors.json
+END
+angular-scenario.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/PUBLIC/!svn/ver/65/interface/Advisor/client/app/lib/angular/angular-scenario.js
+END
+angular-resource.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/PUBLIC/!svn/ver/65/interface/Advisor/client/app/lib/angular/angular-resource.js
+END
+version.json
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/PUBLIC/!svn/ver/65/interface/Advisor/client/app/lib/angular/version.json
+END
