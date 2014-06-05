@@ -13,8 +13,8 @@ userMgmtController.controller('userMgmtCtrl', ['$scope', 'soquService', '$compil
 				{
 					if ( resp.result == "success" )
 					{
-						console.log("The user is registered successfully!");
-						window.location.href = "#/login";
+						console.log("The user is logged in!");
+						window.location.href = "#/main";
 					}
 					
 				},
@@ -32,8 +32,8 @@ userMgmtController.controller('userMgmtCtrl', ['$scope', 'soquService', '$compil
 				{
 					if ( resp.result == "success" )
 					{
-						console.log("The user is logged in successfully!");
-						window.location.href = "#/main";
+						console.log("The user is registered successfully!");
+						window.location.href = "#/login";
 					}
 					
 				},

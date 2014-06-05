@@ -5,7 +5,7 @@ angular.module('soqu.services', ['ngResource']).
   factory('soquService', ['$resource', function ($resource) {
 	  var actions = 
 	  { 
-		  'register': {method:'POST', url:'register/'},
+		  'register': {method:'POST', url:'register/'}
 		  'login': {method:'POST', url:'login/'}
       };
 	  
