@@ -9,11 +9,11 @@
     <!-- common js/css lib -->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"  type="text/css" />  
     <link href="lib/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet"  type="text/css" />  
-	
-    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
     <script src="lib/jquery/jquery-2.1.0.min.js"></script>
     <script src="lib/jquery/jquery.dataTables.js"></script>
     <script src="lib/jquery/jquery.validate.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular/angular-route.js"></script>
     <script src="lib/angular/angular-resource.js"></script>
@@ -22,8 +22,8 @@
     <link href="stylesheets/style.css" rel="stylesheet" type="text/css" />  
 
     <script src="main.js"></script> 
-    <script src="../public/javascripts/controllers/userMgmtController.js"></script> 
-    <script src="../public/javascripts/services/soquService.js"></script> 
+    <script src="javascripts/controllers/userMgmtController.js"></script> 
+    <script src="javascripts/services/soquService.js"></script> 
 
 </head>
 
@@ -58,6 +58,11 @@
 	        	<a class="btn btn-large" href="#/reg">注册</a>
             </p>
         </div>
+		<div class="container">
+			<div>
+				<div ng-view class="container-fluid"></div>
+			</div>
+		</div>
     </div>
 
     <div id="footer">

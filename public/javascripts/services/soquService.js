@@ -8,8 +8,7 @@ angular.module('soqu.services', ['ngResource']).
 		  'register': {method:'POST', url:'register/'}
       };
 	  
-      var jobs = $resource("jobs/", null, actions );      
-	  return jobs;
+      return $resource("/", null, actions );      
 
   }]);
 
