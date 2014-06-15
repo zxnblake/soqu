@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var User = require('./user');
 var crypto = require('crypto');
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
 
 /* GET home page. */
 router.get('/', 
@@ -11,9 +13,23 @@ router.get('/',
 	}
 );
 
+router.post('/logout',
+	function(req, res)
+	{
+		var resp = {result: "", code: 0, message: ""};
+
+		console.log("req.session.user=" + req.session.user);
+		req.session.user = null;
+		resp.result = "success";
+		res.send(resp);
+	}
+);
+
 router.post('/login',
 	function(req, res)
 	{
+		var resp = {result: "", code: 0, message: ""};
+
 		//生成口令的散列值
 		var md5 = crypto.createHash('md5');
 		var password = md5.update(req.body.password).digest('base64');
@@ -30,16 +46,24 @@ router.post('/login',
 				{
 					if ( user.password == u.password )
 					{
-						res.send({result: "success"});
+						req.session.user = user;
+						resp.result = "success";
+						res.send(resp);
 					}
 					else
 					{
-						res.send('incorrect username or password');
+						resp.result = "error";
+						resp.code = 110;
+						resp.message = "incorrect username or password";
+						res.send(resp);
 					}
 				}
 				else
 				{
-					res.send('user not found');
+					resp.result = "error";
+					resp.code = 111;
+					resp.message = "user not found";
+					res.send(resp);
 				}
 			}
 		);
@@ -50,6 +74,8 @@ router.post('/login',
 router.post('/register', 
 	function(req, res) 
 	{
+		var resp = {result: "", code: 0, message: ""};
+
 		//生成口令的散列值
 		var md5 = crypto.createHash('md5');
 		var password = md5.update(req.body.password).digest('base64');
@@ -66,7 +92,10 @@ router.post('/register',
 				console.log(user);
 				if (user)
 				{
-					res.send('Username already exists.');
+					resp.result = "error";
+					resp.code = 100;
+					resp.message = "username already exists";
+					res.send(resp);
 					return;
 				}
 
@@ -76,11 +105,15 @@ router.post('/register',
 					{
 						if (err) 
 						{
-							res.send('Error occurred when adding user to database.');
+							resp.result = "error";
+							resp.code = 101;
+							resp.message = "error occurred when adding user to database";
+							res.send(resp);
 							return;
 						}
-						//req.session.user = newUser;
-						res.send({result: "success"});
+						
+						resp.result = "success";
+						res.send(resp);
 					}
 				);
 			}

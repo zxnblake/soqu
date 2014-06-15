@@ -5,6 +5,7 @@ userMgmtController.controller('userMgmtCtrl', ['$scope', 'soquService', '$compil
 	{
 		$scope.userReg = {userName: "", password: "", passwordRepeat: ""};
 		$scope.userLogin = {userName: "", password: "" };
+		$scope.currUser = "abc";
 
 		$scope.registerUser = function()
 		{
@@ -34,6 +35,14 @@ userMgmtController.controller('userMgmtCtrl', ['$scope', 'soquService', '$compil
 					{
 						console.log("The user is logged in successfully!");
 						window.location.href = "#/main";
+						
+						var currUserElm = document.getElementById("currUser");
+						currUserElm.innerHTML = $scope.userLogin.userName;
+						
+						var regLoginBtnElm = document.getElementById("regLoginBtn");
+						var logoutBtnElm = document.getElementById("logoutBtn");
+						regLoginBtnElm.style.display = "none";
+						logoutBtnElm.style.display = "block";
 					}
 					
 				},
@@ -44,5 +53,28 @@ userMgmtController.controller('userMgmtCtrl', ['$scope', 'soquService', '$compil
 			);
 		};
 
+		var currUrl = window.location.href;
+		if ( currUrl.indexOf("logout") >= 0 )
+		{
+			soquService.logout(
+				function(resp)
+				{
+					if ( resp.result == "success" )
+					{
+						console.log("The user is logged out successfully!");
+					}
+					
+				},
+				function(err)
+				{
+					console.log("Error occurred during user registration: " + err);
+				}
+			);
+			
+			var regLoginBtnElm = document.getElementById("regLoginBtn");
+			var logoutBtnElm = document.getElementById("logoutBtn");
+			regLoginBtnElm.style.display = "block";
+			logoutBtnElm.style.display = "none";
+		}
 	}
 ]); 
