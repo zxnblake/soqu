@@ -17,6 +17,7 @@ sqm.config(
 			$routeProvider.when('/login', {templateUrl:'htmls/login.html', controller:'userMgmtCtrl'});
 			$routeProvider.when('/logout', {templateUrl:'htmls/login.html', controller:'userMgmtCtrl'});
 			$routeProvider.when('/main', {templateUrl:'htmls/main.html', controller:'userMgmtCtrl'});
+			$routeProvider.when('/userFavor', {templateUrl:'htmls/userCenter.html', controller:'favorMgmtCtrl'});
 		}
 	]
 );

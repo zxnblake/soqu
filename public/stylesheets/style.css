@@ -6,7 +6,7 @@
 html,
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   height: 100%; 
   /* The html and body elements cannot have any padding or margin. */
 }
@@ -18,8 +18,6 @@ body {
   height: 100%;
   /* Negative indent footer by its height */
   margin: 0 auto -60px;
-  /* Pad bottom by footer height */
-  padding: 0 0 60px;
 }
 
 /* Set the fixed height of the footer here */
@@ -29,7 +27,7 @@ body {
 }
 
 #wrap > .container {
-  padding: 60px 15px 0;
+  padding: 60px 0 0 0;
 }
 
 .container .credit {
@@ -52,4 +50,26 @@ body {
 	font-size: 120%;
 }
 
+.vertLine
+{
+	width: 1px;
+	background: blue;
+}
+
+.uccommon
+{
+	background-color:#dcdcdc;
+	height:550px;
+}
+
+.ucleft
+{
+	text-align: center;
+	font-size: 120%;
+}
+
+.secondary-toolbar
+{
+	background-color:#dcdcdc;
+}
 
